@@ -1,11 +1,17 @@
 <h1>{{title | titlecase}}</h1>
+<app-carparts></app-carparts> <!-- carparts.component를 root component에 연결 -->
+                               <!-- component 분리 -->
+
+<!--
+<p>There are {{totalCarParts()}} total parts in stock</p>
 
 <ul>
   <li *ngFor="let carPart of carParts">
     <h2>{{carPart.name}}</h2>
     <p>{{carPart.description}}</p>
+    <p>{{carPart.price | currency:'USD':true}}</p> &lt;!&ndash; default true &ndash;&gt;
     <p *ngIf="carPart.inStock > 0">{{carPart.inStock}} in Stock</p>
     <p *ngIf="carPart.inStock === 0">Out of Stock</p>
   </li>
-</ul>
+</ul>-->
 

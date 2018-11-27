@@ -38,4 +38,8 @@ export class AppComponent {
       "inStock": 0
     }
   ];
+
+  totalCarParts() {
+    return this.carParts.reduce((prev, curr) => prev + curr.inStock, 0); // array
+  }
 }
