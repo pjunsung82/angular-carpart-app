@@ -1,0 +1,11 @@
+<h1>{{title | titlecase}}</h1>
+
+<ul>
+  <li *ngFor="let carPart of carParts">
+    <h2>{{carPart.name}}</h2>
+    <p>{{carPart.description}}</p>
+    <p *ngIf="carPart.inStock > 0">{{carPart.inStock}} in Stock</p>
+    <p *ngIf="carPart.inStock === 0">Out of Stock</p>
+  </li>
+</ul>
+
