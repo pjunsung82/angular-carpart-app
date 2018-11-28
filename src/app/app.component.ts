@@ -39,6 +39,10 @@ export class AppComponent {
     }
   ];
 
+  constructor() {
+    console.log('AppComponent constructor called...');
+  }
+
   totalCarParts() {
     return this.carParts.reduce((prev, curr) => prev + curr.inStock, 0); // array
   }
