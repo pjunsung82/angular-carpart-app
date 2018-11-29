@@ -28,4 +28,15 @@ export class CarpartsDataService {
     return this.httpClient.get('assets/car-part.json',
       {responseType: 'json'});
   }
+
+  getCarPartsPromise() : Promise<CarPart[]> {
+    // return this.httpClient.get('assets/car-part.json').toPromise() // promise객체로 바뀐거
+    // return this.httpClient.get('assets/car-part.json')
+    return this.httpClient.get('http://127.0.0.1:52274/data.json')
+      .toPromise()
+      .then(res => res['data']) // 정상정인 경우
+      .catch(err => console.log('Error 발생', err));
+  }
+
+
 }

@@ -7,11 +7,15 @@ import { CarpartsComponent } from './carparts/carparts.component';
 import {FormsModule} from '@angular/forms';
 import {CarpartsDataService} from './carparts/caprts-data.service';
 import {HttpClientModule} from '@angular/common/http';
+import { AboutComponent } from './about/about.component';
+import { RacesComponent } from './race/race.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CarpartsComponent
+    CarpartsComponent,
+    AboutComponent,
+    RacesComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +23,7 @@ import {HttpClientModule} from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  //providers: [CarpartsDataService],
+  // providers: [CarpartsDataService],
   providers: [],
   bootstrap: [AppComponent]
 })
